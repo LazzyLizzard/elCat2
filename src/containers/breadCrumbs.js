@@ -3,9 +3,12 @@
  */
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class BreadCrumbs extends Component {
+
     render() {
+        console.log(this.props);
         return (
             <ul>
                 <li>123</li>
@@ -14,4 +17,11 @@ class BreadCrumbs extends Component {
     }
 }
 
-export default BreadCrumbs;
+function mapStateToProps({breadCrumbs}) {
+    return {
+        breadCrumbs
+    }
+}
+
+
+export default connect(mapStateToProps)(BreadCrumbs);

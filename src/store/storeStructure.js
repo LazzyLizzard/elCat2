@@ -1,3 +1,8 @@
+/**
+ * default store structure
+ * @type {}
+ */
+
 const storeStructure = {
 
     // голобальный флаг загрузки
@@ -6,7 +11,6 @@ const storeStructure = {
     manufsAndTransportTypes: {},
 
     currentPath: {
-        vendorId: null,
         transportTypeId: null,
         year: null,
         modelsListIds: [],
@@ -16,7 +20,11 @@ const storeStructure = {
     },
 
     breadCrumbs: {
-        manufacturer: {}
+        manufacturer: {
+            id: 1,
+            name: 'honda'
+        }
+
     }
 
     /*
