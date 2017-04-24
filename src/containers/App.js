@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import BreadCrumbs from './breadCrumbs'
 //import { bindActionCreators } from 'redux'
-//import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
 //        const { ml, isLoading, trTypesData } = this.props;
         return (
             <div>
-                <div><BreadCrumbs /></div>
+                <div><BreadCrumbs  /></div>
 
                 <h3>
                     Elcat
@@ -47,7 +47,13 @@ class App extends Component {
         )
     }
 
+}
+
+function mapStateToProps({breadCrumbs}) {
+    return {
+        breadCrumbs
+    }
 
 }
 
-export default App;
+export default connect(mapStateToProps)(App);

@@ -12,7 +12,9 @@ import configureStore from './store/configureStore'
 //        isLoading: false
 //    }
 //}
-const store = configureStore();
+const store = configureStore({
+    breadCrumbs: [1,2,3]
+});
 
 render(
     <Provider store={store}>
