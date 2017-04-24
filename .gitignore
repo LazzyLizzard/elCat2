@@ -4,10 +4,10 @@
 ._*
 .Spotlight-V100
 .Trashes
+.idea
 Icon?
 ehthumbs.db
 Thumbs.db
-
 node_modules
 npm-debug.log
 book_img
