@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import BreadCrumbs from './breadCrumbs'
 //import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
 
 
 class App extends Component {
@@ -49,11 +48,5 @@ class App extends Component {
 
 }
 
-function mapStateToProps({breadCrumbs}) {
-    return {
-        breadCrumbs
-    }
 
-}
-
-export default connect(mapStateToProps)(App);
+export default App;
