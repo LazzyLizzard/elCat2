@@ -11,8 +11,10 @@ class BreadCrumbItem extends Component {
                     if (breadCrumbsData[key] !== null) {
                         let breadCrumbItem = breadCrumbsData[key];
                         return <li
-                            key={key}
-                        >{breadCrumbItem.name}
+                            key={key}>
+                            <a href='#'>
+                                {breadCrumbItem.name}
+                            </a>
                         </li>
                     }
                 })}

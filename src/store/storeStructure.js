@@ -10,7 +10,7 @@ const storeStructure = {
 
     manufsAndTransportTypes: {},
 
-    currentPath: {
+    mainAppState: {
         transportTypeId: null,
         year: null,
         modelsListIds: [],

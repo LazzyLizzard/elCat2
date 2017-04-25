@@ -17,12 +17,15 @@ class App extends Component {
         const {breadCrumbs} = this.props;
         return (
 
+
             <div>
-                <div><BreadCrumbs breadCrumbsPath={breadCrumbs} /></div>
 
                 <h3>
                     Elcat
                 </h3>
+
+                <div><BreadCrumbs breadCrumbsPath={breadCrumbs} /></div>
+
 
                 <div id='data'>
 
