@@ -4,8 +4,6 @@ class BreadCrumbItem extends Component {
     render() {
         const { breadCrumbsData } = this.props;
 
-        console.log(this.props);
-
         return (
 
             <ul>
