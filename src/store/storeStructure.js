@@ -20,10 +20,19 @@ const storeStructure = {
     },
 
     breadCrumbs: {
-        manufacturer: {
+        siteRoot: {
+            link: '/',
+            name: 'shop'
+        },
+        elCatRoot: {
+            link: '/shop2/elcat.php',
+            name: 'elCat'
+        },
+        manufacturersAndTypes: {
             id: 1,
             name: 'honda'
-        }
+        },
+        years: null
 
     }
 

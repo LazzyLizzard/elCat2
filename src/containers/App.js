@@ -1,5 +1,8 @@
+/**
+ * умный компонент
+ */
 import React, { Component } from 'react'
-import BreadCrumbs from './breadCrumbs'
+import BreadCrumbs from '../components/breadCrumbs/BreadCrumbs'
 //import { bindActionCreators } from 'redux'
 
 
