@@ -8,7 +8,7 @@ class BreadCrumbItem extends Component {
 
             <ul>
                 {Object.keys(breadCrumbsData).map((key) => {
-                    if (breadCrumbsData[key] === null) {
+                    if (breadCrumbsData[key] !== null) {
                         let breadCrumbItem = breadCrumbsData[key];
                         return <li
                             key={key}
