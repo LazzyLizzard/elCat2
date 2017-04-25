@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import BreadCrumbs from '../components/breadCrumbs/BreadCrumbs'
 
-import ManufsAndTransportTypes from '../components/manufsAndTranspotTypes/ManufsAndTransportTypes'
+import ManufsAndTypes from '../components/manufsAndTranspotTypes/ManufsAndTransportTypes'
 //import { bindActionCreators } from 'redux'
 
 
@@ -17,9 +17,10 @@ class App extends Component {
 //        const ml = this.props.ml.manufacturers;
 //        console.log(this.props);
 //        const { ml, isLoading, trTypesData } = this.props;
-        const {breadCrumbs} = this.props;
-        return (
 
+        const {breadCrumbs} = this.props;
+
+        return (
 
             <div>
 
@@ -35,7 +36,7 @@ class App extends Component {
                 <div id='data'>
 
                     <div>
-                        manuf and types ->
+                        <ManufsAndTypes />
                     </div>
 
                     <div>
