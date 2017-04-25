@@ -5,7 +5,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import BreadCrumbs from '../components/breadCrumbs/BreadCrumbs'
+
+import ManufsAndTransportTypes from '../components/manufsAndTranspotTypes/ManufsAndTransportTypes'
 //import { bindActionCreators } from 'redux'
+
 
 
 class App extends Component {
@@ -23,6 +26,8 @@ class App extends Component {
                 <h3>
                     Elcat
                 </h3>
+
+
 
                 <div><BreadCrumbs breadCrumbsPath={breadCrumbs} /></div>
 
