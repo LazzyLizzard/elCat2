@@ -68,6 +68,7 @@ export function getManufsAndTypes() {
                 'manuf_name_safe': ''
             }]
     };
+
     return (dispatch) => {
         dispatch(manufReq());
         //fetch({});

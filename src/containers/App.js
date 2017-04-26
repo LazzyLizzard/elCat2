@@ -17,11 +17,9 @@ class App extends Component {
 
 
     componentDidMount() {
-
         const { loadDefaultPage } = this.props;
 
-        console.log(loadDefaultPage)
-
+        // эта функа определена в mapDispatchToProps
         loadDefaultPage()
 
     }
@@ -77,13 +75,17 @@ class App extends Component {
 
 }
 /**
+ * ИЗ state БЕРЕМ ТОЛЬКО НУЖНЫЕ ПАРАМЕТРЫ
+ *
  * получаем в пропс значения из стейта
+ * бердкрамбс определен статикой в кофигурации стора
  * @param breadCrumbs
  * @returns {{breadCrumbs: *}}
  */
-function mapStateToProps({breadCrumbs}) {
+function mapStateToProps({breadCrumbs, isLoading}) {
     return {
-        breadCrumbs
+        breadCrumbs,
+        isLoading
     }
 }
 
