@@ -1,10 +1,14 @@
 /**
+ * ACTION
  * первоначальная загрузка первой страницы - производители и типы транспорта
  * @type {string}
  */
 
 export const MANUF_AND_TYPES_REQ = 'MANUF_AND_TYPES_REQ';
 export const MANUF_AND_TYPES_SUCC = 'MANUF_AND_TYPES_SUCC'
+
+export const MANUF_AND_TYPES_INIT = 'MANUF_AND_TYPES_INIT'
+
 //export const MANUF_AND_TYPES_FAIL = 'MANUF_AND_TYPES_FAIL';
 
 const manufReq = () => ({type: MANUF_AND_TYPES_REQ});
@@ -13,16 +17,20 @@ const manufReq = () => ({type: MANUF_AND_TYPES_REQ});
 const manufSucc = (data) => ({
     type: MANUF_AND_TYPES_SUCC,
     payload: {
-        manufacturers: data.manufacturers,
-        transportTypesData: data.transportTypesData
+        manufsAndTransportTypes: data.startPageData
     }
 });
 
+export const initManufAndTypes = (data) => ({
+    type: MANUF_AND_TYPES_INIT,
+    payload: { data }
+});
 // action generator
 export function getManufsAndTypes() {
 
     const tandt = {
-        'manufList': [
+
+        'startPageData': [
             {
                 'manuf_id': '1',
                 'manuf_name': 'HONDA',

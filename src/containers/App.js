@@ -12,15 +12,14 @@ import * as Actions from '../actions/getManufAndTransportTypes'
 //import { bindActionCreators } from 'redux'
 
 
-
 class App extends Component {
 
 
     componentDidMount() {
-        const { loadDefaultPage } = this.props;
+        ///const { loadDefaultPage } = this.props;
 
         // эта функа определена в mapDispatchToProps
-        loadDefaultPage()
+        //loadDefaultPage()
 
     }
 
@@ -29,7 +28,7 @@ class App extends Component {
 //        console.log(this.props);
 //        const { ml, isLoading, trTypesData } = this.props;
 
-        const { breadCrumbs } = this.props;
+        const { breadCrumbs} = this.props;
 
         return (
 
@@ -39,9 +38,7 @@ class App extends Component {
                     Elcat
                 </h3>
 
-
-
-                <div><BreadCrumbs breadCrumbsPath={breadCrumbs} /></div>
+                <div><BreadCrumbs breadCrumbsPath={breadCrumbs}/></div>
 
 
                 <div id='data'>
@@ -82,11 +79,9 @@ class App extends Component {
  * @param breadCrumbs
  * @returns {{breadCrumbs: *}}
  */
-function mapStateToProps({breadCrumbs, isLoading}) {
-    return {
-        breadCrumbs,
-        isLoading
-    }
+function mapStateToProps({manufsAndTransportTypes}) {
+    return manufsAndTransportTypes;
+
 }
 
 function mapDispatchToProps(dispatch) {
@@ -97,7 +92,6 @@ function mapDispatchToProps(dispatch) {
         loadDefaultPage: () => dispatch(Actions.getManufsAndTypes())
     }
 }
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

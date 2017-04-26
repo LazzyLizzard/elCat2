@@ -6,24 +6,25 @@ import * as startPageActions from '../actions/getManufAndTransportTypes'
 
 
 
-//const initialState = {
-//    manufsAndTransportTypes: null,
-//    isLoading: false
-//};
+const initialState = {
+    manufsAndTransportTypes: null,
+    loading:false
+};
 
-export default function manufsAndTypes(state, action) {
+export default function manufsAndTypes(state = initialState, action) {
     switch (action.type) {
+        case startPageActions.MANUF_AND_TYPES_INIT:
+            return action.payload.data;
 
         case startPageActions.MANUF_AND_TYPES_REQ:
             return Object.assign({}, state, {
-                isLoading: true
+                loading: true
             });
 
         case startPageActions.MANUF_AND_TYPES_SUCC:
             return Object.assign({}, state, {
-                isLoading: false,
-                manufacturers: action.payload.manufacturers,
-                transportTypesData: action.payload.transportTypesData
+                loading: false,
+                manufsAndTransportTypes: action.payload.manufsAndTransportTypes
             });
 
         default:

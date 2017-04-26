@@ -4,8 +4,10 @@ class BreadCrumbItem extends Component {
     render() {
         const { breadCrumbsData } = this.props;
 
+        if(!breadCrumbsData) {
+            return null;
+        }
         return (
-
             <ul>
                 {Object.keys(breadCrumbsData).map((key) => {
                     if (breadCrumbsData[key] !== null) {
